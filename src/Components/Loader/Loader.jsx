@@ -1,18 +1,11 @@
-import { Hourglass } from 'react-loader-spinner';
+import { useSelector } from "react-redux";
 
 const Loader = () => {
+  const {isDark}= useSelector((state)=>state.theme);
   return (
-    <div className="flex justify-center items-center h-64">
-      <Hourglass
-        visible={true}
-        height="80"
-        width="80"
-        ariaLabel="hourglass-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        colors={['#306cce', '#72a1ed']}
-      />
-    </div>
+   <div className="flex justify-center items-center h-64">
+    <div className={`w-12 h-12 border-4 border-dashed rounded-full animate-spin ${isDark ? "dark":" "} border-primary dark:border-primary-dark`}></div>
+  </div>
   );
 };
 
