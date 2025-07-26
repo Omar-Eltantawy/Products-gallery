@@ -1,0 +1,23 @@
+@import "tailwindcss";
+body{
+  margin: 0;
+  padding: 0;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #2563eb;
+  /* --color-primary-dark: #155dfc; */
+  --color-primary-dark: #dc2626;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
